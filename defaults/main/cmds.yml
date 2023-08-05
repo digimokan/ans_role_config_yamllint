@@ -1,0 +1,3 @@
+# command to execute to run yamllint
+yamllint_main_cmd: 'yamllint'
+

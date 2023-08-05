@@ -1,0 +1,3 @@
+- name: "Install yamllint application"
+  ansible.builtin.include_tasks: install/main.yml
+

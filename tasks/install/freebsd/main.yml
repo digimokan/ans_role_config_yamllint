@@ -1,0 +1,7 @@
+- name: "Install the 'py-yamllint' application package"
+  ansible.builtin.package:
+    name: py-yamllint
+    state: present
+  become: true
+  become_user: root
+
