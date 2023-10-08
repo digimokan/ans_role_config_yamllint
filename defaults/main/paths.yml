@@ -1,0 +1,6 @@
+# main yamllint config dir
+yamllint_user_config_dir: "/home/{{ yamllint_user_name }}/.config/yamllint"
+
+# main yamllint config file path
+yamllint_user_config_file_path: "{{ yamllint_user_config_dir }}/config"
+

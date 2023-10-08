@@ -54,6 +54,8 @@ Install and configure the yamllint yaml linter.
          ansible.builtin.include_role:
            name: ans_role_config_yamllint
            public: true
+         vars:
+           yamllint_user_name: "user2"
    ```
 
 ## Role Options
@@ -61,6 +63,10 @@ Install and configure the yamllint yaml linter.
 See the role `defaults` files for main role vars listings:
 
   * [defaults](../defaults/main/)
+
+Define these _required_ vars for the role:
+
+  * `yamllint_user_name`: user name of main yamllint user
 
 ## Contributing
 

@@ -1,0 +1,21 @@
+- name: "Create user yamllint config dir at '{{ yamllint_user_config_dir }}'"
+  ansible.builtin.file:
+    path: "{{ yamllint_user_config_dir }}"
+    state: directory
+    owner: "{{ yamllint_user_name }}"
+    group: "{{ yamllint_user_name }}"
+    mode: '755'
+  become: true
+  become_user: root
+
+- name: "Configure user yamllint settings in '{{ yamllint_user_config_file_path }}'"
+  ansible.builtin.template:
+    dest: "{{ yamllint_user_config_file_path }}"
+    src: "config.j2"
+    owner: "{{ yamllint_user_name }}"
+    group: "{{ yamllint_user_name }}"
+    mode: '644'
+    force: true
+  become: true
+  become_user: root
+
