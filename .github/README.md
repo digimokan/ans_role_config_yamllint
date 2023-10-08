@@ -53,7 +53,7 @@ Install and configure the yamllint yaml linter.
        - name: "Install and configure the yamllint yaml linter"
          ansible.builtin.include_role:
            name: ans_role_config_yamllint
-           public: yes
+           public: true
    ```
 
 ## Role Options
